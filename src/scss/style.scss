@@ -1,11 +1,12 @@
-@import 'config';
+@use 'base';
+
+.flex {
+  display: flex;
+  gap: 20px;
+}
 
 .key {
   position: relative;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px;
   padding: 20px;
   min-width: 150px;
   background: #eee;
@@ -21,5 +22,12 @@
     color: #555;
     font-size: 0.875rem;
     text-align: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .flex {
+    flex-direction: column;
+    gap: 40px;
   }
 }
